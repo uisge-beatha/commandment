@@ -4,6 +4,8 @@ Licensed under the MIT license. See the included LICENSE.txt file for details.
 """
 from flask import Flask, render_template
 from flask_jwt import JWT
+
+from .omdm_app import omdm_app
 from .configuration import configuration_app
 from .mdm_app import mdm_app
 from .mdmcert import admin_mdmcert_app
@@ -43,6 +45,7 @@ def create_app() -> Flask:
     app.register_blueprint(ota_app, url_prefix='/ota')
     app.register_blueprint(oauth_app, url_prefix='/oauth')
     app.register_blueprint(saml_app, url_prefix='/saml')
+    app.register_blueprint(omdm_app, url_prefix='/omdm')
 
     # SPA Entry Point
     @app.route('/')
