@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>commandment.mdm &#8212; commandment 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  
+   
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">commandment 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    ../../index.html" class="text-logo">Commandment</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer/index.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../internal/index.html">Internals Reference</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../index.html">Docs</a></li>
+              
+                <li><a href="../index.html">Module code</a></li>
+              
+              <li>commandment.mdm</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <h1>Source code for commandment.mdm</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">IntFlag</span><span class="p">,</span> <span class="n">auto</span><span class="p">,</span> <span class="n">Enum</span>
+
+
+<div class="viewcode-block" id="Platform"><a class="viewcode-back" href="../../internal/mdm/types.html#commandment.models.Platform">[docs]</a><span class="k">class</span> <span class="nc">Platform</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The platform of the managed device.&quot;&quot;&quot;</span>
+    <span class="n">Unknown</span> <span class="o">=</span> <span class="s1">&#39;Unknown&#39;</span>  <span class="c1"># Not enough information</span>
+    <span class="n">macOS</span> <span class="o">=</span> <span class="s1">&#39;macOS&#39;</span>
+    <span class="n">iOS</span> <span class="o">=</span> <span class="s1">&#39;iOS&#39;</span>
+    <span class="n">tvOS</span> <span class="o">=</span> <span class="s1">&#39;tvOS&#39;</span></div>
+
+
+<div class="viewcode-block" id="AccessRights"><a class="viewcode-back" href="../../internal/mdm/types.html#commandment.models.AccessRights">[docs]</a><span class="k">class</span> <span class="nc">AccessRights</span><span class="p">(</span><span class="n">IntFlag</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The MDM protocol defines a bitmask for granting permissions to an MDM to perform certain operations.</span>
+<span class="sd">    </span>
+<span class="sd">    This enumeration contains all of those access rights flags.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">_generate_next_value_</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">last_values</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">count</span>
+
+    <span class="n">ProfileInspection</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">ProfileInstallRemove</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">DeviceLockPasscodeRemoval</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">DeviceErase</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">QueryDeviceInformation</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">QueryNetworkInformation</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">ProvProfileInspection</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">ProvProfileInstallRemove</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">InstalledApplications</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">RestrictionQueries</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">SecurityQueries</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">ChangeSettings</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">ManageApps</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+
+    <span class="n">All</span> <span class="o">=</span> <span class="n">ProfileInspection</span> <span class="o">|</span> <span class="n">ProfileInstallRemove</span> <span class="o">|</span> <span class="n">DeviceLockPasscodeRemoval</span> <span class="o">|</span> <span class="n">DeviceErase</span> <span class="o">|</span> <span class="n">QueryDeviceInformation</span> \
+          <span class="o">|</span> <span class="n">QueryNetworkInformation</span> <span class="o">|</span> <span class="n">ProvProfileInspection</span> <span class="o">|</span> <span class="n">ProvProfileInstallRemove</span> <span class="o">|</span> <span class="n">InstalledApplications</span> \
+          <span class="o">|</span> <span class="n">RestrictionQueries</span> <span class="o">|</span> <span class="n">SecurityQueries</span> <span class="o">|</span> <span class="n">ChangeSettings</span> <span class="o">|</span> <span class="n">ManageApps</span></div>
+
+
+<div class="viewcode-block" id="CommandStatus"><a class="viewcode-back" href="../../internal/mdm/types.html#commandment.models.CommandStatus">[docs]</a><span class="k">class</span> <span class="nc">CommandStatus</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;CommandStatus describes all the possible states of a command in the device command queue.&quot;&quot;&quot;</span>
+    <span class="c1">#: str: Command has been created but has not been sent.</span>
+    <span class="n">Queued</span> <span class="o">=</span> <span class="s1">&#39;Q&#39;</span>
+    <span class="c1">#: str: Command has been sent to the device, but no response has returned.</span>
+    <span class="n">Sent</span> <span class="o">=</span> <span class="s1">&#39;S&#39;</span>
+    <span class="c1">#: str: Response has been returned from the device. This is considered completed</span>
+    <span class="n">Acknowledged</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
+    <span class="c1">#: str: The command that we sent was invalid, unable to be processed.</span>
+    <span class="n">Invalid</span> <span class="o">=</span> <span class="s1">&#39;I&#39;</span>
+    <span class="c1">#: str: The device is busy, this command cannot be processed right now.</span>
+    <span class="n">NotNow</span> <span class="o">=</span> <span class="s1">&#39;N&#39;</span>
+    <span class="c1">#  str: This command is considered dead because it timed out, the device timed out, or was orphaned by a</span>
+    <span class="c1">#  removed device.</span>
+    <span class="n">Expired</span> <span class="o">=</span> <span class="s1">&#39;E&#39;</span></div>
+
+
+<div class="viewcode-block" id="SettingsItem"><a class="viewcode-back" href="../../internal/mdm/types.html#commandment.models.SettingsItem">[docs]</a><span class="k">class</span> <span class="nc">SettingsItem</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A list of possible values for Managed Settings items.</span>
+
+<span class="sd">    See Also:</span>
+<span class="sd">          - `Managed Settings &lt;https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW59&gt;`_._</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">VoiceRoaming</span> <span class="o">=</span> <span class="s1">&#39;VoiceRoaming&#39;</span>
+    <span class="n">PersonalHotspot</span> <span class="o">=</span> <span class="s1">&#39;PersonalHotspot&#39;</span>
+    <span class="n">Wallpaper</span> <span class="o">=</span> <span class="s1">&#39;Wallpaper&#39;</span>
+    <span class="n">DataRoaming</span> <span class="o">=</span> <span class="s1">&#39;DataRoaming&#39;</span>
+    <span class="n">ApplicationAttributes</span> <span class="o">=</span> <span class="s1">&#39;ApplicationAttributes&#39;</span>
+    <span class="n">DeviceName</span> <span class="o">=</span> <span class="s1">&#39;DeviceName&#39;</span>
+    <span class="n">HostName</span> <span class="o">=</span> <span class="s1">&#39;HostName&#39;</span>
+    <span class="n">MDMOptions</span> <span class="o">=</span> <span class="s1">&#39;MDMOptions&#39;</span>
+    <span class="n">PasscodeLockGracePeriod</span> <span class="o">=</span> <span class="s1">&#39;PasscodeLockGracePeriod&#39;</span>
+    <span class="n">MaximumResidentUsers</span> <span class="o">=</span> <span class="s1">&#39;MaximumResidentUsers&#39;</span></div>
+</pre></div>
+
+          </div>
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="HTTP Routing Table"
+             >routing table</a> |</li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">commandment 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Jesse Peterson, Mosen. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
